@@ -4,7 +4,7 @@ use crate::imports::imports_acmd::*;
 unsafe fn game_specialnmax(fighter: &mut L2CAgentBase) {
     frame(fighter.lua_state_agent, 4.0);
     if macros::is_excute(fighter) {
-        VarModule::set_int(fighter.battle_object, &mut koopa::instance::int::FIREBALL_COOLDOWN_FRAME,MAX_COOLDOWN);
+        VarModule::set_int(fighter.battle_object, koopa::instance::int::FIREBALL_COOLDOWN_FRAME,MAX_COOLDOWN);
     }
     frame(fighter.lua_state_agent, 24.0);
     if macros::is_excute(fighter) {

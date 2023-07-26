@@ -16,7 +16,7 @@ unsafe fn move_main(weapon: &mut L2CWeaponCommon) -> L2CValue {
             let owner_id = WorkModule::get_int(weapon.module_accessor, *WEAPON_INSTANCE_WORK_ID_INT_LINK_OWNER) as u32;
             let owner_object = util::get_battle_object_from_id(owner_id);
             let entry_id = WorkModule::get_int(weapon.module_accessor, *FIGHTER_INSTANCE_WORK_ID_INT_ENTRY_ID) as u32;
-            if VarModule::is_flag(owner_object, &mut koopa::instance::flag::IS_MIDBUS) {
+            if VarModule::is_flag(owner_object, koopa::instance::flag::IS_MIDBUS) {
                 is_midbus = true;
                 WorkModule::set_int(weapon.module_accessor,1,*WEAPON_KOOPA_BREATH_INSTANCE_WORK_ID_INT_KIND);
             }

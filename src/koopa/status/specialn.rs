@@ -3,7 +3,7 @@ use crate::imports::imports_agent::*;
 
 #[status_script(agent = "koopa", status = FIGHTER_STATUS_KIND_SPECIAL_N, condition = LUA_SCRIPT_STATUS_FUNC_STATUS_MAIN)]
 unsafe fn specialn_main(fighter: &mut L2CFighterCommon) -> L2CValue {
-    let can_fireball = VarModule::get_int(fighter.battle_object, &mut koopa::instance::int::FIREBALL_COOLDOWN_FRAME) <= 0;
+    let can_fireball = VarModule::get_int(fighter.battle_object, koopa::instance::int::FIREBALL_COOLDOWN_FRAME) <= 0;
     if (!can_fireball){
         return original!(fighter);
     }
@@ -57,13 +57,13 @@ unsafe extern "C" fn specialnmax_main_loop(fighter: &mut L2CFighterCommon) -> L2
 
 #[status_script(agent = "koopa", status = FIGHTER_STATUS_KIND_SPECIAL_N, condition = LUA_SCRIPT_STATUS_FUNC_EXEC_STATUS)]
 unsafe fn specialn_exec(fighter: &mut L2CFighterCommon) -> L2CValue {
-    let can_fireball =  VarModule::get_int(fighter.battle_object, &mut koopa::instance::int::FIREBALL_COOLDOWN_FRAME) <= 0;
+    let can_fireball =  VarModule::get_int(fighter.battle_object, koopa::instance::int::FIREBALL_COOLDOWN_FRAME) <= 0;
     if (!can_fireball){
         if WorkModule::is_flag(fighter.module_accessor, *FIGHTER_KOOPA_STATUS_BREATH_FLAG_CONTINUE_START)
         && !WorkModule::is_flag(fighter.module_accessor, *FIGHTER_KOOPA_STATUS_BREATH_FLAG_CONTINUE_END)
         {
-            if VarModule::get_int(fighter.battle_object, &mut koopa::instance::int::FIREBALL_COOLDOWN_FRAME) < MAX_COOLDOWN {
-                VarModule::inc_int(fighter.battle_object, &mut koopa::instance::int::FIREBALL_COOLDOWN_FRAME);
+            if VarModule::get_int(fighter.battle_object, koopa::instance::int::FIREBALL_COOLDOWN_FRAME) < MAX_COOLDOWN {
+                VarModule::inc_int(fighter.battle_object, koopa::instance::int::FIREBALL_COOLDOWN_FRAME);
             }
         }
         return original!(fighter);
@@ -75,7 +75,7 @@ unsafe fn specialn_exec(fighter: &mut L2CFighterCommon) -> L2CValue {
 
 #[status_script(agent = "koopa", status = FIGHTER_STATUS_KIND_SPECIAL_N, condition = LUA_SCRIPT_STATUS_FUNC_EXEC_STOP)]
 unsafe fn specialn_execstop(fighter: &mut L2CFighterCommon) -> L2CValue {
-    let can_fireball =  VarModule::get_int(fighter.battle_object, &mut koopa::instance::int::FIREBALL_COOLDOWN_FRAME) <= 0;
+    let can_fireball =  VarModule::get_int(fighter.battle_object, koopa::instance::int::FIREBALL_COOLDOWN_FRAME) <= 0;
     if (!can_fireball){
         return original!(fighter);
     }

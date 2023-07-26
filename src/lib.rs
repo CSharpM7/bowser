@@ -16,7 +16,7 @@ extern crate lazy_static;
 mod koopa;
 
 mod imports;
-//mod custom_vars;
+mod custom_vars;
 pub mod vars;
 pub mod data;
 use data::gamemode::*;
@@ -33,7 +33,7 @@ extern "C"{
 #[skyline::main(name = "smashline_bowsersbigblast")]
 pub fn main() {
     println!("[smashline_bowsersbigblast::main] Loading...");
-    //custom_vars::install();
+    custom_vars::install();
     //data::install();
     data::gamemode::set_gamemode();
     koopa::install();

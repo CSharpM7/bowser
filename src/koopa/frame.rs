@@ -30,11 +30,11 @@ unsafe fn fireball_cooldown(fighter: &mut L2CFighterCommon) {
         return;
     }
 
-    let cooleddown = VarModule::countdown_int(fighter.battle_object, &mut koopa::instance::int::FIREBALL_COOLDOWN_FRAME, 0);
-    let charged_effect =  VarModule::get_int(fighter.battle_object, &mut koopa::instance::int::FIREBALL_EFFECT_ID);
+    let cooleddown = VarModule::countdown_int(fighter.battle_object, koopa::instance::int::FIREBALL_COOLDOWN_FRAME, 0);
+    let charged_effect =  VarModule::get_int(fighter.battle_object, koopa::instance::int::FIREBALL_EFFECT_ID);
     if !cooleddown {
         if charged_effect > 0 {
-            VarModule::set_int(fighter.battle_object, &mut koopa::instance::int::FIREBALL_EFFECT_ID,0);
+            VarModule::set_int(fighter.battle_object, koopa::instance::int::FIREBALL_EFFECT_ID,0);
             if EffectModule::is_exist_effect(fighter.module_accessor, charged_effect as u32) {
                 EffectModule::kill(fighter.module_accessor, charged_effect as u32, false,false);
             }
@@ -51,7 +51,7 @@ unsafe fn fireball_cooldown(fighter: &mut L2CFighterCommon) {
         let pos = &Vector3f{x: 0.0, y: 1.0, z: 0.0};
         let rot = &Vector3f{x: 180.0, y: 0.0, z: 50.0};
         let handle = EffectModule::req_follow(fighter.module_accessor, Hash40::new("koopa_breath_m_fire"), Hash40::new("jaw"), pos, rot, 1.0, true, 0, 0, 0, 0, 0, false, false) as u32;
-        VarModule::set_int(fighter.battle_object, &mut koopa::instance::int::FIREBALL_EFFECT_ID,handle as i32);
+        VarModule::set_int(fighter.battle_object, koopa::instance::int::FIREBALL_EFFECT_ID,handle as i32);
     }
 }
 

@@ -3,7 +3,6 @@
 use smash::phx::Vector3f;
 
 pub const MAX_COOLDOWN : i32 = 600;
-/* 
 pub mod koopa {
     pub mod instance {
         pub mod flag {
@@ -17,7 +16,7 @@ pub mod koopa {
         }
     }
 }
-*/
+/* 
 pub mod koopa {
     pub mod instance {
         pub mod flag {
@@ -31,18 +30,22 @@ pub mod koopa {
         }
     }
 }
+*/
 use {
     smash::{
         phx::*,
         app::*,
     },
     sharpsmashlinesuite::{
-        VarModule::*,
+        getvar::*,
     }
 };
 pub unsafe fn reset_vars(object: *mut BattleObject){
+    GetVarManager::reset_var_module(object,false);
+    /* 
     let entry = get_entry_from_object(object);
     koopa::instance::flag::IS_MIDBUS[entry] = false;
     koopa::instance::int::FIREBALL_COOLDOWN_FRAME[entry] = 0;
     koopa::instance::int::FIREBALL_EFFECT_ID[entry] = 0;
+    */
 }
