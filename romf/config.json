@@ -1,0 +1,92 @@
+{
+    "share-to-added": {
+        "fighter/koopa/motion/body/c00/a00defaulteyelid.nuanmb": [
+            "fighter/koopa/motion/body/c01/a00defaulteyelid.nuanmb",
+            "fighter/koopa/motion/body/c02/a00defaulteyelid.nuanmb",
+            "fighter/koopa/motion/body/c03/a00defaulteyelid.nuanmb",
+            "fighter/koopa/motion/body/c04/a00defaulteyelid.nuanmb",
+            "fighter/koopa/motion/body/c05/a00defaulteyelid.nuanmb",
+            "fighter/koopa/motion/body/c06/a00defaulteyelid.nuanmb",
+            "fighter/koopa/motion/body/c07/a00defaulteyelid.nuanmb"
+        ],
+        "fighter/koopa/motion/body/c00/c00attackdash.nuanmb": [
+            "fighter/koopa/motion/body/c01/c00attackdash.nuanmb",
+            "fighter/koopa/motion/body/c02/c00attackdash.nuanmb",
+            "fighter/koopa/motion/body/c03/c00attackdash.nuanmb",
+            "fighter/koopa/motion/body/c04/c00attackdash.nuanmb",
+            "fighter/koopa/motion/body/c05/c00attackdash.nuanmb",
+            "fighter/koopa/motion/body/c06/c00attackdash.nuanmb",
+            "fighter/koopa/motion/body/c07/c00attackdash.nuanmb"
+        ],
+        "fighter/koopa/motion/body/c00/c05attackairn.nuanmb": [
+            "fighter/koopa/motion/body/c01/c05attackairn.nuanmb",
+            "fighter/koopa/motion/body/c02/c05attackairn.nuanmb",
+            "fighter/koopa/motion/body/c03/c05attackairn.nuanmb",
+            "fighter/koopa/motion/body/c04/c05attackairn.nuanmb",
+            "fighter/koopa/motion/body/c05/c05attackairn.nuanmb",
+            "fighter/koopa/motion/body/c06/c05attackairn.nuanmb",
+            "fighter/koopa/motion/body/c07/c05attackairn.nuanmb"
+        ],
+        "fighter/koopa/motion/body/c00/c05landingairn.nuanmb": [
+            "fighter/koopa/motion/body/c01/c05landingairn.nuanmb",
+            "fighter/koopa/motion/body/c02/c05landingairn.nuanmb",
+            "fighter/koopa/motion/body/c03/c05landingairn.nuanmb",
+            "fighter/koopa/motion/body/c04/c05landingairn.nuanmb",
+            "fighter/koopa/motion/body/c05/c05landingairn.nuanmb",
+            "fighter/koopa/motion/body/c06/c05landingairn.nuanmb",
+            "fighter/koopa/motion/body/c07/c05landingairn.nuanmb"
+        ],
+        "fighter/koopa/motion/body/c00/motion_list.bin": [
+            "fighter/koopa/motion/body/c01/motion_list.bin",
+            "fighter/koopa/motion/body/c02/motion_list.bin",
+            "fighter/koopa/motion/body/c03/motion_list.bin",
+            "fighter/koopa/motion/body/c04/motion_list.bin",
+            "fighter/koopa/motion/body/c05/motion_list.bin",
+            "fighter/koopa/motion/body/c06/motion_list.bin",
+            "fighter/koopa/motion/body/c07/motion_list.bin"
+        ],
+        "fighter/koopa/motion/breath/c00/motion_list.bin": [
+            "fighter/koopa/motion/breath/c01/motion_list.bin",
+            "fighter/koopa/motion/breath/c02/motion_list.bin",
+            "fighter/koopa/motion/breath/c03/motion_list.bin",
+            "fighter/koopa/motion/breath/c04/motion_list.bin",
+            "fighter/koopa/motion/breath/c05/motion_list.bin",
+            "fighter/koopa/motion/breath/c06/motion_list.bin",
+            "fighter/koopa/motion/breath/c07/motion_list.bin"
+        ]
+    },
+    "new-dir-files": {
+        "fighter/koopa/c00": [
+            "fighter/koopa/motion/body/c00/d00specialairnmax.nuanmb",
+            "fighter/koopa/motion/body/c00/d00specialnmax.nuanmb"
+        ],
+        "fighter/koopa/c01": [
+            "fighter/koopa/motion/body/c01/d00specialairnmax.nuanmb",
+            "fighter/koopa/motion/body/c01/d00specialnmax.nuanmb"
+        ],
+        "fighter/koopa/c02": [
+            "fighter/koopa/motion/body/c02/d00specialairnmax.nuanmb",
+            "fighter/koopa/motion/body/c02/d00specialnmax.nuanmb"
+        ],
+        "fighter/koopa/c03": [
+            "fighter/koopa/motion/body/c03/d00specialairnmax.nuanmb",
+            "fighter/koopa/motion/body/c03/d00specialnmax.nuanmb"
+        ],
+        "fighter/koopa/c04": [
+            "fighter/koopa/motion/body/c04/d00specialairnmax.nuanmb",
+            "fighter/koopa/motion/body/c04/d00specialnmax.nuanmb"
+        ],
+        "fighter/koopa/c05": [
+            "fighter/koopa/motion/body/c05/d00specialairnmax.nuanmb",
+            "fighter/koopa/motion/body/c05/d00specialnmax.nuanmb"
+        ],
+        "fighter/koopa/c06": [
+            "fighter/koopa/motion/body/c06/d00specialairnmax.nuanmb",
+            "fighter/koopa/motion/body/c06/d00specialnmax.nuanmb"
+        ],
+        "fighter/koopa/c07": [
+            "fighter/koopa/motion/body/c07/d00specialairnmax.nuanmb",
+            "fighter/koopa/motion/body/c07/d00specialnmax.nuanmb"
+        ]
+    }
+}

@@ -1,0 +1,118 @@
+---
+motion_path: ~
+altered:
+  attack_dash:
+    game_script: ~
+    flags:
+      turn: ~
+      loop: ~
+      move: ~
+      fix_trans: ~
+      fix_rot: ~
+      fix_scale: ~
+      unk_40: ~
+      unk_80: ~
+      unk_100: ~
+      unk_200: ~
+      unk_400: ~
+    blend_frames: 0
+    animations: []
+    scripts: []
+    extra:
+      Some:
+        xlu_start: 0
+        xlu_end: 0
+        cancel_frame: 51
+        no_stop_intp: ~
+  attack_air_n:
+    game_script: ~
+    flags:
+      turn: ~
+      loop: ~
+      move: ~
+      fix_trans: ~
+      fix_rot: ~
+      fix_scale: ~
+      unk_40: ~
+      unk_80: ~
+      unk_100: ~
+      unk_200: ~
+      unk_400: ~
+    blend_frames: 0
+    animations: []
+    scripts: []
+    extra:
+      Some:
+        xlu_start: 0
+        xlu_end: 0
+        cancel_frame: 46
+        no_stop_intp: ~
+  special_n_max:
+    game_script: game_specialnmax
+    flags:
+      turn: ~
+      loop: ~
+      move: ~
+      fix_trans: ~
+      fix_rot: ~
+      fix_scale: ~
+      unk_40: ~
+      unk_80: true
+      unk_100: ~
+      unk_200: ~
+      unk_400: ~
+    blend_frames: 0
+    animations:
+      - Inserted:
+          index: 0
+          changes:
+            - name: d00specialnmax.nuanmb
+              unk: 0
+    scripts:
+      - Inserted:
+          index: 0
+          changes:
+            - expression_specialnmax
+            - sound_specialnmax
+            - effect_specialnmax
+    extra:
+      Some:
+        xlu_start: 0
+        xlu_end: 0
+        cancel_frame: 60
+        no_stop_intp: ~
+  special_air_n_max:
+    game_script: game_specialairnmax
+    flags:
+      turn: ~
+      loop: ~
+      move: ~
+      fix_trans: ~
+      fix_rot: ~
+      fix_scale: ~
+      unk_40: ~
+      unk_80: true
+      unk_100: ~
+      unk_200: ~
+      unk_400: ~
+    blend_frames: 0
+    animations:
+      - Inserted:
+          index: 0
+          changes:
+            - name: d00specialairnmax.nuanmb
+              unk: 0
+    scripts:
+      - Inserted:
+          index: 0
+          changes:
+            - expression_specialairnmax
+            - sound_specialairnmax
+            - effect_specialairnmax
+    extra:
+      Some:
+        xlu_start: 0
+        xlu_end: 0
+        cancel_frame: 60
+        no_stop_intp: ~
+removed: []

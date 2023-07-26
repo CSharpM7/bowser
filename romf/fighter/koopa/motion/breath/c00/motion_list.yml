@@ -1,0 +1,103 @@
+---
+motion_path: "0x0000000000"
+list:
+  move:
+    game_script: game_move
+    flags:
+      turn: false
+      loop: false
+      move: false
+      fix_trans: false
+      fix_rot: false
+      fix_scale: false
+      unk_40: false
+      unk_80: false
+      unk_100: false
+      unk_200: false
+      unk_400: false
+    blend_frames: 0
+    animations: []
+    scripts:
+      - sound_move
+      - effect_move
+    extra: ~
+  max:
+    game_script: game_max
+    flags:
+      turn: false
+      loop: false
+      move: false
+      fix_trans: false
+      fix_rot: false
+      fix_scale: false
+      unk_40: false
+      unk_80: false
+      unk_100: false
+      unk_200: false
+      unk_400: false
+    blend_frames: 0
+    animations: []
+    scripts:
+      - sound_max
+      - effect_max
+    extra: ~
+  end:
+    game_script: game_end
+    flags:
+      turn: false
+      loop: false
+      move: false
+      fix_trans: false
+      fix_rot: false
+      fix_scale: false
+      unk_40: false
+      unk_80: false
+      unk_100: false
+      unk_200: false
+      unk_400: false
+    blend_frames: 0
+    animations: []
+    scripts:
+      - sound_end
+      - effect_end
+    extra: ~
+  max_midbus:
+    game_script: game_maxmidbus
+    flags:
+      turn: false
+      loop: false
+      move: false
+      fix_trans: false
+      fix_rot: false
+      fix_scale: false
+      unk_40: false
+      unk_80: false
+      unk_100: false
+      unk_200: false
+      unk_400: false
+    blend_frames: 0
+    animations: []
+    scripts:
+      - sound_maxmidbus
+      - effect_maxmidbus
+    extra: ~
+  end_midbus:
+    game_script: game_endmidbus
+    flags:
+      turn: false
+      loop: false
+      move: false
+      fix_trans: false
+      fix_rot: false
+      fix_scale: false
+      unk_40: false
+      unk_80: false
+      unk_100: false
+      unk_200: false
+      unk_400: false
+    blend_frames: 0
+    animations: []
+    scripts:
+      - sound_endmidbus
+      - effect_endmidbus
+    extra: ~
