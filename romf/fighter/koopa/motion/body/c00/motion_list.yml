@@ -2782,12 +2782,12 @@ list:
       xlu_end: 24
       cancel_frame: 0
       no_stop_intp: false
-  special_s_jump:
-    game_script: game_specialsjump
+  special_s_throwf:
+    game_script: game_specialsthrowf
     flags:
       turn: false
       loop: false
-      move: true
+      move: false
       fix_trans: false
       fix_rot: false
       fix_scale: false
@@ -2798,43 +2798,97 @@ list:
       unk_400: false
     blend_frames: 0
     animations:
-      - name: d01specialsjump.nuanmb
+      - name: e01throwf.nuanmb
         unk: 0
     scripts:
-      - expression_specialsjump
-      - sound_specialsjump
-      - effect_specialsjump
+      - expression_throwf
+      - sound_throwf
+      - effect_throwf
     extra:
       xlu_start: 0
       xlu_end: 0
-      cancel_frame: 0
+      cancel_frame: 59
       no_stop_intp: false
-  special_s_fall:
-    game_script: game_specialsfall
+  special_s_throwb:
+    game_script: game_specialsthrowb
     flags:
-      turn: false
-      loop: true
+      turn: true
+      loop: false
       move: false
       fix_trans: false
       fix_rot: false
       fix_scale: false
       unk_40: false
-      unk_80: false
+      unk_80: true
       unk_100: false
       unk_200: false
       unk_400: false
     blend_frames: 0
     animations:
-      - name: d01specialsfall.nuanmb
+      - name: e01throwb.nuanmb
         unk: 0
     scripts:
-      - expression_specialsfall
-      - sound_specialsfall
-      - effect_specialsfall
+      - expression_throwb
+      - sound_throwb
+      - effect_throwb
     extra:
       xlu_start: 0
       xlu_end: 0
-      cancel_frame: 0
+      cancel_frame: 39
+      no_stop_intp: false
+  special_s_jump:
+    game_script: game_specialsthrowf
+    flags:
+      turn: false
+      loop: false
+      move: false
+      fix_trans: false
+      fix_rot: false
+      fix_scale: false
+      unk_40: false
+      unk_80: true
+      unk_100: false
+      unk_200: false
+      unk_400: false
+    blend_frames: 0
+    animations:
+      - name: e01throwf.nuanmb
+        unk: 0
+    scripts:
+      - expression_throwf
+      - sound_throwf
+      - effect_throwf
+    extra:
+      xlu_start: 0
+      xlu_end: 0
+      cancel_frame: 59
+      no_stop_intp: false
+  special_s_fall:
+    game_script: game_specialsthrowb
+    flags:
+      turn: true
+      loop: false
+      move: false
+      fix_trans: false
+      fix_rot: false
+      fix_scale: false
+      unk_40: false
+      unk_80: true
+      unk_100: false
+      unk_200: false
+      unk_400: false
+    blend_frames: 0
+    animations:
+      - name: e01throwb.nuanmb
+        unk: 0
+    scripts:
+      - expression_throwb
+      - sound_throwb
+      - effect_throwb
+    extra:
+      xlu_start: 0
+      xlu_end: 0
+      cancel_frame: 39
       no_stop_intp: false
   special_s_landing:
     game_script: game_specialslanding

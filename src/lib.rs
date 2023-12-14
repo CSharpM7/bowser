@@ -33,9 +33,18 @@ extern "C"{
 #[skyline::main(name = "smashline_bowsersbigblast")]
 pub fn main() {
     println!("[smashline_bowsersbigblast::main] Loading...");
-    custom_vars::install();
-    //data::install();
-    data::gamemode::set_gamemode();
-    koopa::install();
+    //data::gamemode::set_gamemode();
+    //custom_vars::install();
+    #[cfg(not(feature = "dev"))]{
+        //Add hooks here
+        #[cfg(feature = "devhook")]{
+        println!("[smashline_bowsersbigblast::main] Dev Hook Installed");
+        return;
+        }
+        koopa::install();
+    }
+
+    #[cfg(feature = "dev")]
+    koopa::installer();
     println!("[smashline_bowsersbigblast::main] Loaded!");
 }
