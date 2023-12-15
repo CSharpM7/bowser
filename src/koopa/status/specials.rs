@@ -26,6 +26,7 @@ unsafe extern "C" fn specials_situation_helper(fighter: &mut L2CFighterCommon, i
     fighter.sub_change_kinetic_type_by_situation(FIGHTER_KINETIC_TYPE_GROUND_STOP.into(),FIGHTER_KINETIC_TYPE_AIR_STOP.into());
 
     KineticModule::enable_energy(fighter.module_accessor, *FIGHTER_KINETIC_ENERGY_ID_STOP);
+    KineticModule::enable_energy(fighter.module_accessor, *FIGHTER_KINETIC_ENERGY_ID_MOTION);
     KineticModule::enable_energy(fighter.module_accessor, *FIGHTER_KINETIC_ENERGY_ID_GRAVITY);
     if is_start {
         let mut speed_x = KineticModule::get_sum_speed_x(fighter.module_accessor, *KINETIC_ENERGY_RESERVE_ATTRIBUTE_MAIN);
@@ -312,7 +313,8 @@ unsafe fn specials_landing_main(fighter: &mut L2CFighterCommon) -> L2CValue {
 
         let motion_share = WorkModule::get_param_int(fighter.module_accessor, 0xad2ee25eu64, 0x7d88ea0u64);
         let throw_motion = //WorkModule::get_int64(fighter.module_accessor, *FIGHTER_STATUS_THROWN_WORK_INT_MOTION_KIND);
-        if throw_F {36603360558 as u64} else {36554879287 as u64}; //39642420386 lw 41418534085 hi
+        if throw_F {36603360558 as u64} else {36554879287 as u64}; //39642420386 lw 41418534085 hi 36603360558 f 36554879287 b
+        let throw_rate = if throw_F {1.7} else {1.0};
         
         let mut share_type = 0;
         if motion_share == *FIGHTER_MOTION_SHARE_TYPE_TARO {
@@ -331,7 +333,8 @@ unsafe fn specials_landing_main(fighter: &mut L2CFighterCommon) -> L2CValue {
                 *BODY_TYPE_MOTION_DX
             );
         }
-        MotionModule::change_motion(capture_boma,Hash40::new_raw(throw_motion),1.0,1.0,false,0.0,false,false);
+        MotionModule::change_motion(capture_boma,Hash40::new_raw(throw_motion),0.0,throw_rate,false,0.0,false,false);
+        
     }
 
     WorkModule::set_float(fighter.module_accessor, throw_Input,*FIGHTER_KOOPA_STATUS_SPECIAL_S_WORK_FLOAT_START_Y);
@@ -381,6 +384,18 @@ unsafe fn specials_landing_exec(fighter: &mut L2CFighterCommon) -> L2CValue {
     0.into()
 }
 
+#[status_script(agent = "ridley", status = FIGHTER_STATUS_KIND_THROW, condition = LUA_SCRIPT_STATUS_FUNC_EXEC_STATUS)]
+unsafe fn throw_exec(fighter: &mut L2CFighterCommon) -> L2CValue {
+    if MotionModule::frame(fighter.module_accessor) < 2.0
+    && StatusModule::status_kind(fighter.module_accessor) == *FIGHTER_STATUS_KIND_THROW {
+        let target = WorkModule::get_int64(fighter.module_accessor, *FIGHTER_STATUS_THROW_WORK_INT_TARGET_OBJECT);
+        let target_boma =  sv_battle_object::module_accessor(target as u32);
+        let throw_motion = WorkModule::get_int64(target_boma, *FIGHTER_STATUS_THROWN_WORK_INT_MOTION_KIND);
+        println!("Thrown Mot: {throw_motion}");
+    }
+    0.into()
+}
+
 pub fn install() {
     install_status_scripts!(
         specials_squat_main,
@@ -390,5 +405,7 @@ pub fn install() {
         specials_landing_pre,
         specials_landing_main,
         specials_landing_exec,
+
+        throw_exec
     );
 }

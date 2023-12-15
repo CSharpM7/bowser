@@ -2787,7 +2787,7 @@ list:
     flags:
       turn: false
       loop: false
-      move: false
+      move: true
       fix_trans: false
       fix_rot: false
       fix_scale: false
@@ -2798,16 +2798,16 @@ list:
       unk_400: false
     blend_frames: 0
     animations:
-      - name: e01throwf.nuanmb
+      - name: d01specialslanding.nuanmb
         unk: 0
     scripts:
-      - expression_throwf
-      - sound_throwf
-      - effect_throwf
+      - expression_specialsthrowf
+      - sound_specialsthrowf
+      - effect_specialsthrowf
     extra:
       xlu_start: 0
       xlu_end: 0
-      cancel_frame: 59
+      cancel_frame: 36
       no_stop_intp: false
   special_s_throwb:
     game_script: game_specialsthrowb
@@ -2828,20 +2828,20 @@ list:
       - name: e01throwb.nuanmb
         unk: 0
     scripts:
-      - expression_throwb
-      - sound_throwb
-      - effect_throwb
+      - expression_specialsthrowb
+      - sound_specialsthrowb
+      - effect_specialsthrowb
     extra:
       xlu_start: 0
       xlu_end: 0
       cancel_frame: 39
       no_stop_intp: false
   special_air_s_throwf:
-    game_script: game_specialsthrowf
+    game_script: game_specialairsthrowf
     flags:
       turn: false
       loop: false
-      move: false
+      move: true
       fix_trans: false
       fix_rot: false
       fix_scale: false
@@ -2855,13 +2855,13 @@ list:
       - name: d01specialsjump.nuanmb
         unk: 0
     scripts:
-      - expression_throwf
-      - sound_throwf
-      - effect_throwf
+      - expression_specialairsthrowf
+      - sound_specialairsthrowf
+      - effect_specialairsthrowf
     extra:
       xlu_start: 0
       xlu_end: 0
-      cancel_frame: 59
+      cancel_frame: 36
       no_stop_intp: false
   special_air_s_throwb:
     game_script: game_specialsthrowb
@@ -2882,9 +2882,9 @@ list:
       - name: d01specialsfall.nuanmb
         unk: 0
     scripts:
-      - expression_throwb
-      - sound_throwb
-      - effect_throwb
+      - expression_specialairsthrowb
+      - sound_specialairsthrowb
+      - effect_specialairsthrowb
     extra:
       xlu_start: 0
       xlu_end: 0
